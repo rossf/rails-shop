@@ -16,6 +16,9 @@
   <%= @product.price %>
 </p>
 
-
-<%= link_to 'Edit', edit_product_path(@product) %> |
+<% if admin_signed_in? %>
+    <%= link_to 'Edit', edit_product_path(@product) %>
+<% else %>
+    <%= button_to "Add to cart", carts_url(@product), :method => :post, :remote => true, :success => "cart", :failure => "error" %>
+<% end%>|
 <%= link_to 'Back', products_path %>

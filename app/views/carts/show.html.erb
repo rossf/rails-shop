@@ -1,0 +1,11 @@
+<p id="notice"><%= notice %></p>
+<p>
+  <%= @cart.user.email %>
+</p>
+
+<% @cart.products.each do | product | %>
+    <%= product  %>
+<% end %>
+
+<%= link_to 'Edit', edit_cart_path(@cart) %> |
+<%= link_to 'Back', carts_path %>
