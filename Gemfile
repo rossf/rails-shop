@@ -23,7 +23,7 @@ end
 gem 'jquery-rails'
 gem 'carrierwave'
 gem 'devise'
-gem 'rails-boilerplate'
+gem 'bootstrap-sass'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

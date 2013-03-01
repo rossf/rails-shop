@@ -30,6 +30,8 @@ GEM
       multi_json (~> 1.0)
     arel (3.0.2)
     bcrypt-ruby (3.0.1)
+    bootstrap-sass (2.3.0.1)
+      sass (~> 3.2)
     builder (3.0.4)
     carrierwave (0.8.0)
       activemodel (>= 3.2.0)
@@ -79,7 +81,6 @@ GEM
       activesupport (= 3.2.12)
       bundler (~> 1.0)
       railties (= 3.2.12)
-    rails-boilerplate (0.1.9)
     railties (3.2.12)
       actionpack (= 3.2.12)
       activesupport (= 3.2.12)
@@ -117,12 +118,12 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bootstrap-sass
   carrierwave
   coffee-rails (~> 3.2.1)
   devise
   jquery-rails
   rails (= 3.2.12)
-  rails-boilerplate
   sass-rails (~> 3.2.3)
   sqlite3
   uglifier (>= 1.0.3)
