@@ -4,8 +4,10 @@
 </p>
 
 <% @cart.products.each do | product | %>
-    <%= product  %>
+    <%= product.name  %>
 <% end %>
+
+<%= button_to 'Checkout', checkouts_url, :method => :get %>
 
 <%= link_to 'Edit', edit_cart_path(@cart) %> |
 <%= link_to 'Back', carts_path %>

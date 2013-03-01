@@ -1,9 +1,10 @@
 RailsShop::Application.routes.draw do
+
   devise_for :admins
 
   devise_for :users
 
-  resources :products, :carts
+  resources :products, :carts, :checkouts
 
 
   # The priority is based upon order of creation:
