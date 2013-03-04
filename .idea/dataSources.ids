@@ -83,4 +83,17 @@
       <index name="index_users_on_email" unique="true" columns="email" />
     </table>
   </data-source>
+  <data-source source="LOCAL" name="Rails rails-shop: test" product="SQLite" version="3.7.2" jdbc-version="2.1" driver-name="SQLiteJDBC" driver-version="native" uuid="6bd20e61-eb43-460d-af3b-650fa48e3340">
+    <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+    <jdbc-url>jdbc:sqlite:/home/ross/RubymineProjects/rails-shop/db/test.sqlite3</jdbc-url>
+    <libraries>
+      <library>
+        <url>file://$USER_HOME$/.RubyMine50/config/jdbc-drivers/xerial-sqlite-license.txt</url>
+      </library>
+      <library>
+        <url>file://$USER_HOME$/.RubyMine50/config/jdbc-drivers/sqlite-jdbc-3.7.2.jar</url>
+      </library>
+    </libraries>
+    <schema name="" catalog="" />
+  </data-source>
 </component>

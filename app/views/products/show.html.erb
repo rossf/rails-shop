@@ -19,6 +19,20 @@
 <% if admin_signed_in? %>
     <%= link_to 'Edit', edit_product_path(@product) %>
 <% else %>
-    <%= button_to "Add to cart", carts_url(@product), :method => :post, :remote => true, :success => "cart", :failure => "error" %>
-<% end%>|
+    <%= form_tag carts_url(@product), :id => 'update_cart', :remote => true do %>
+        <%= submit_tag 'Add to cart' %>
+    <% end %>
+<% end %>|
 <%= link_to 'Back', products_path %>
+<div id="'class"></div>
+<script>
+    $(document).ready(function () {
+        $('#update_cart')
+                .bind('ajax:success', function (data, cart, xhr) {
+                    window.location = '<%= carts_url %>/' + cart.id;
+                })
+                .bind('ajax:failure', function (xhr, status, error) {
+                    alert("Error adding to cart");
+                })
+    });
+</script>

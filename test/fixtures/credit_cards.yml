@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  expiryMonth: 1
+  expiryYear: 1
+  nameOnCard: MyString
+
+two:
+  expiryMonth: 1
+  expiryYear: 1
+  nameOnCard: MyString
