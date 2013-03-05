@@ -2,7 +2,7 @@ require 'fuelable/cardtoken'
 
 class CreditCardsController < ApplicationController
 
-  Fuelable::api_key = 'sb_NzNhODQ3MDEtYmRhMS00ODJhLTk5NGYtY2QyMGVhNWJhYjM4'
+  Fuelable::api_key = 'sb_YmEyN2FmZGItMGUzZS00YzczLWJhYjMtZWU5MjFmNTY4MjU2'
 
   before_filter :authenticate_user!
 
@@ -58,10 +58,23 @@ class CreditCardsController < ApplicationController
     @credit_card = CreditCard.new(card_hash)
     @credit_card.user = current_user
 
-    cardToken = Fuelable::CardToken.create(@credit_card)
+    card_hash['expMonth'] = expiry_month
+    card_hash['expYear'] = expiry_year.length > 2 ? expiry_year[2..-1] : expiry_year
+
+    card_token_hash = {"card" => card_hash}
+    begin
+      card_token = Fuelable::CardToken.create(card_token_hash)
+      @credit_card.card_token = card_token['id']
+    rescue Fuelable::FuelableException => e
+      puts "#{e.message} #{e.reference} #{e.errors}"
+      e.errors.each do |error|
+        real_error = error['error']
+        @credit_card.errors.add(real_error['field'], real_error['message'])
+      end
+    end
 
     respond_to do |format|
-      if @credit_card.save
+      if @credit_card.errors.empty? && @credit_card.save
         format.html { redirect_to @credit_card, notice: 'Credit card was successfully created.' }
         format.json { render json: @credit_card, status: :created, location: @credit_card }
       else

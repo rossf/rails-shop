@@ -11,6 +11,19 @@
       </library>
     </libraries>
     <schema name="" catalog="" />
+    <table name="addresses" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4" />
+      <column name="address1" sqlType="VARCHAR(255)" length="2000000000" precision="10" nullable="true" jdbcType="12" />
+      <column name="address2" sqlType="VARCHAR(255)" length="2000000000" precision="10" nullable="true" jdbcType="12" />
+      <column name="city" sqlType="VARCHAR(255)" length="2000000000" precision="10" nullable="true" jdbcType="12" />
+      <column name="state" sqlType="VARCHAR(255)" length="2000000000" precision="10" nullable="true" jdbcType="12" />
+      <column name="country" sqlType="VARCHAR(255)" length="2000000000" precision="10" nullable="true" jdbcType="12" />
+      <column name="postcode" sqlType="VARCHAR(255)" length="2000000000" precision="10" nullable="true" jdbcType="12" />
+      <column name="user_id" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4" />
+      <column name="created_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="false" jdbcType="12" />
+      <column name="updated_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="false" jdbcType="12" />
+      <primary-key columns="id" />
+    </table>
     <table name="admins" schema="" catalog="" type="TABLE">
       <column name="id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4" />
       <column name="email" sqlType="VARCHAR(255)" length="2000000000" precision="10" nullable="false" jdbcType="12" />
@@ -31,7 +44,7 @@
     </table>
     <table name="cart_items" schema="" catalog="" type="TABLE">
       <column name="id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4" />
-      <column name="user_id" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4" />
+      <column name="cart_id" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4" />
       <column name="product_id" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4" />
       <column name="created_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="false" jdbcType="12" />
       <column name="updated_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="false" jdbcType="12" />
@@ -43,6 +56,17 @@
       <column name="cart_item_id" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4" />
       <column name="created_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="false" jdbcType="12" />
       <column name="updated_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="false" jdbcType="12" />
+      <primary-key columns="id" />
+    </table>
+    <table name="credit_cards" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4" />
+      <column name="expiry_month" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4" />
+      <column name="expiry_year" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4" />
+      <column name="name_on_card" sqlType="VARCHAR(255)" length="2000000000" precision="10" nullable="true" jdbcType="12" />
+      <column name="user_id" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4" />
+      <column name="created_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="false" jdbcType="12" />
+      <column name="updated_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="false" jdbcType="12" />
+      <column name="card_token" sqlType="VARCHAR(255)" length="2000000000" precision="10" nullable="true" jdbcType="12" />
       <primary-key columns="id" />
     </table>
     <table name="products" schema="" catalog="" type="TABLE">
