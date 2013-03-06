@@ -2,7 +2,7 @@ require 'fuelable/cardtoken'
 
 class CreditCardsController < ApplicationController
 
-  Fuelable::api_key = 'sb_YmEyN2FmZGItMGUzZS00YzczLWJhYjMtZWU5MjFmNTY4MjU2'
+  Fuelable::api_key = 'sb_MmUxYWVhN2YtNGRmZC00Y2E3LTk5YTktODNlNTc4YWE1MjJk'
 
   before_filter :authenticate_user!
 
@@ -12,7 +12,7 @@ class CreditCardsController < ApplicationController
     @credit_cards = CreditCard.all
 
     respond_to do |format|
-      format.html # index.html.erb
+      format.html # create.html.erb
       format.json { render json: @credit_cards }
     end
   end
@@ -34,7 +34,7 @@ class CreditCardsController < ApplicationController
     @credit_card = CreditCard.new
 
     respond_to do |format|
-      format.html # new.html.erb
+      format.html # create.html.erb
       format.json { render json: @credit_card }
     end
   end
@@ -77,9 +77,11 @@ class CreditCardsController < ApplicationController
       if @credit_card.errors.empty? && @credit_card.save
         format.html { redirect_to @credit_card, notice: 'Credit card was successfully created.' }
         format.json { render json: @credit_card, status: :created, location: @credit_card }
+        format.js {render json: @credit_card, status: :created, location: @credit_card}
       else
         format.html { render action: "new" }
         format.json { render json: @credit_card.errors, status: :unprocessable_entity }
+        format.js { render json: @credit_card.errors, status: :unprocessable_entity }
       end
     end
   end

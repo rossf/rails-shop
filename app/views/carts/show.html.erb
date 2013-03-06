@@ -7,7 +7,10 @@
     <%= product.name  %>
 <% end %>
 
-<%= button_to 'Checkout', checkouts_url, :method => :get, :update => { :success => "cart", :failure => "error" } %>
+<%=  form_tag(:controller => :checkouts) do %>
+    <%= hidden_field_tag :cart, @cart.id %>
+    <%= submit_tag 'Checkout' %>
+<% end %>
 
 <%= link_to 'Edit', edit_cart_path(@cart) %> |
 <%= link_to 'Back', carts_path %>
