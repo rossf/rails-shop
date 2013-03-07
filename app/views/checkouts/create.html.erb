@@ -3,58 +3,128 @@
 <div class="accordion" id="accordion2">
   <div class="accordion-group">
     <div class="accordion-heading">
-      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseCard">
         Card details
       </a>
     </div>
-    <div id="collapseOne" class="accordion-body collapse in">
-      <%= form_for @credit_card, :url => credit_cards_url, :remote => true, :format => :json do |f| %>
+    <div id="collapseCard" class="accordion-body collapse in">
+      <%= form_for @credit_card, :url => credit_cards_url, :remote => true, :html => {:'data-type' => 'json'} do |cardForm| %>
           <div class="field" id="name_on_card">
-            <%= f.label :name_on_card %>
-            <%= f.text_field :name_on_card %>
+            <%= cardForm.label :name_on_card %>
+            <%= cardForm.text_field :name_on_card %>
           </div>
           <div class="field" id="number">
-            <%= f.label :number, "Card Number" %>
-            <%= f.text_field :number %>
+            <%= cardForm.label :number, "Card Number" %>
+            <%= cardForm.text_field :number %>
           </div>
           <div class="field" id="expiry_date">
-            <%= f.label :expiry_date, "Expiry date" %>
-            <%= f.date_select :expiry_date, :start_year => Date.today.year, :end_year => Date.today.year+15, :discard_day => true %>
+            <%= cardForm.label :expiry_date, "Expiry date" %>
+            <%= cardForm.date_select :expiry_date, :start_year => Date.today.year, :end_year => Date.today.year+15, :discard_day => true %>
           </div>
           <div class="field" id="cvc">
-            <%= f.label :cvc, "CVC" %>
-            <%= f.text_field :cvc %>
+            <%= cardForm.label :cvc, "CVC" %>
+            <%= cardForm.text_field :cvc %>
           </div>
-          <%= f.submit 'Add card' %>
+          <%= cardForm.submit 'Add card' %>
       <% end %>
+    </div>
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseShipping">
+        Delivery Address
+      </a>
+    </div>
+    <div id="collapseShipping" class="accordion-body collapse">
+      <%= form_for @address, :url => addresses_url, :remote => true, :html => {:'data-type' => 'json'} do |addressForm| %>
+          <div class="field" id="address1">
+            <%= addressForm.label :address1 %>
+            <%= addressForm.text_field :address1 %>
+          </div>
+          <div class="field" id="address2">
+            <%= addressForm.label :address2 %>
+            <%= addressForm.text_field :address2 %>
+          </div>
+          <div class="field" id="city">
+            <%= addressForm.label :city %>
+            <%= addressForm.text_field :city %>
+          </div>
+          <div class="field" id="postcode">
+            <%= addressForm.label :postcode %>
+            <%= addressForm.text_field :postcode %>
+          </div>
+          <div class="field" id="state">
+            <%= addressForm.label :state %>
+            <%= addressForm.text_field :state %>
+          </div>
+          <div class="field" id="country">
+            <%= addressForm.label :country %>
+            <%= addressForm.country_select :country %>
+          </div>
+          <div class="field" id="useAsBilling">
+            <%= label_tag :billing, "Use as billing address?" %>
+            <%= check_box_tag :billing, 'yes', :true, :id => 'billing_check_box' %>
+          </div>
+
+          <%= addressForm.submit "Add Address" %>
+      <% end %>
+    </div>
+
+    <div id="billing_address" style="display:none" >
+      <div class="accordion-heading">
+        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseBilling">
+          Billing Address
+        </a>
+      </div>
+      <div id="collapseBilling" class="accordion-body collapse">
+        <%= form_for @address, :url => addresses_url, :remote => true, :html => {:'data-type' => 'json', :id => 'billing_address_form'} do |addressForm| %>
+            <div class="field" id="address1">
+              <%= addressForm.label :address1 %>
+              <%= addressForm.text_field :address1 %>
+            </div>
+            <div class="field" id="address2">
+              <%= addressForm.label :address2 %>
+              <%= addressForm.text_field :address2 %>
+            </div>
+            <div class="field" id="city">
+              <%= addressForm.label :city %>
+              <%= addressForm.text_field :city %>
+            </div>
+            <div class="field" id="postcode">
+              <%= addressForm.label :postcode %>
+              <%= addressForm.text_field :postcode %>
+            </div>
+            <div class="field" id="state">
+              <%= addressForm.label :state %>
+              <%= addressForm.text_field :state %>
+            </div>
+            <div class="field" id="country">
+              <%= addressForm.label :country %>
+              <%= addressForm.country_select :country %>
+            </div>
+
+            <%= addressForm.submit "Add Address" %>
+        <% end %>
+      </div>
+    </div>
+
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseShippingMethod">
+        Shipping Method
+      </a>
+    </div>
+    <div id="collapseShippingMethod" class="accordion-body collapse">
+      <fieldset>
+          <%= radio_button_tag(:shipping_method, "flying_monkeys") %>
+          <%= label_tag(:shipping_method_flying_monkeys, "Flying Monkeys") %>
+          <br/>
+          <%= radio_button_tag(:shipping_method, "teleportation") %>
+          <%= label_tag(:shipping_method_teleportation, "Teleportation") %>
+        <br/>
+          <%= radio_button_tag(:shipping_method, "post") %>
+          <%= label_tag(:shipping_method_post, "Some guy showing up at your door (post)") %>
+      </fieldset>
+
+      <%= button_tag "Order", :id=>"submit_all" %>
     </div>
   </div>
 </div>
-<script>
 
-    $(document).ready(function () {
-        $('#new_credit_card')
-                .bind('ajax:success', function (data, cart, xhr) {
-                    var errorElements = document.getElementsByClassName(error);
-                    errorElements.forEach(function (element) {
-                        element.className = "field"
-                    });
-                })
-                .bind('ajax:error', function (xhr, value, status) {
-                    var errors = JSON.parse(value.responseText);
-                    for (var error in errors) {
-                        var strippedError;
-                        if ((/^card/).test(error)) {
-                            strippedError = new String(error.substring(5));
-                        }
-                        var errorElement = document.getElementById(strippedError);
-                        errorElement.className += " control-group error";
-                        var messageElement = document.createElement("p");
-                        var message = document.createTextNode(errors[error]);
-                        messageElement.appendChild(message);
-                        errorElement.appendChild(messageElement);
-                    }
-                    ;
-                })
-    });
-</script>

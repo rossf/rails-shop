@@ -6,5 +6,7 @@ class CheckoutsController < ApplicationController
     @cart = Cart.find(params[:cart])
     raise "Invalid user" if @cart.user != current_user
     @credit_card = CreditCard.new
+    @address = Address.new
+    @billing_address = Address.new
   end
 end

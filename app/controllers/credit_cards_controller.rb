@@ -2,7 +2,7 @@ require 'fuelable/cardtoken'
 
 class CreditCardsController < ApplicationController
 
-  Fuelable::api_key = 'sb_MmUxYWVhN2YtNGRmZC00Y2E3LTk5YTktODNlNTc4YWE1MjJk'
+  Fuelable::api_key = 'sb_MDY5ZjM2NDAtNjhlYy00OGM3LTljMDYtZmI3NjBjYTEwMTVh'
 
   before_filter :authenticate_user!
 

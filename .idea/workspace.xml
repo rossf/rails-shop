@@ -2,21 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="90db9705-d3af-40fd-aa27-972417c20c27" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20130306054909_add_credit_card_to_cart.rb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/checkouts/index.html.erb" afterPath="$PROJECT_DIR$/app/views/checkouts/create.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/cart.rb" afterPath="$PROJECT_DIR$/app/models/cart.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/carts_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/carts_controller.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/addresses/_form.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/controllers/addresses_controller.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/functional/addresses_controller_test.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/helpers/addresses_helper.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/unit/helpers/addresses_helper_test.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/checkout.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/addresses/edit.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/addresses/index.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/addresses/new.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/addresses/show.html.erb" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/checkout.js.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/controllers/address_controller.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/helpers/address_helper.rb" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/address.rb" afterPath="$PROJECT_DIR$/app/models/address.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/checkout.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/checkout.css.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/checkouts_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/checkouts_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/checkouts/create.html.erb" afterPath="$PROJECT_DIR$/app/views/checkouts/create.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/credit_cards_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/credit_cards_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/products_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/products_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/carts/show.html.erb" afterPath="$PROJECT_DIR$/app/views/carts/show.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="rails-shop.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/" />
-    <file path="/Dummy.txt" changelist="90db9705-d3af-40fd-aa27-972417c20c27" time="1362548946371" ignored="false" />
+    <file path="/Dummy.txt" changelist="90db9705-d3af-40fd-aa27-972417c20c27" time="1362566644100" ignored="false" />
     <file path="/Gemfile" changelist="90db9705-d3af-40fd-aa27-972417c20c27" time="1362389457369" ignored="false" />
     <file path="/products_controller.rb" changelist="90db9705-d3af-40fd-aa27-972417c20c27" time="1362111273693" ignored="false" />
     <file path="/product.rb" changelist="90db9705-d3af-40fd-aa27-972417c20c27" time="1362127132032" ignored="false" />
@@ -28,15 +38,15 @@
     <file path="/show.html.erb" changelist="90db9705-d3af-40fd-aa27-972417c20c27" time="1362554556899" ignored="false" />
     <file path="/20130301064649_create_carts.rb" changelist="90db9705-d3af-40fd-aa27-972417c20c27" time="1362121428728" ignored="false" />
     <file path="/20130301070615_create_carts.rb" changelist="90db9705-d3af-40fd-aa27-972417c20c27" time="1362126730408" ignored="false" />
-    <file path="/routes.rb" changelist="90db9705-d3af-40fd-aa27-972417c20c27" time="1362481280708" ignored="false" />
+    <file path="/routes.rb" changelist="90db9705-d3af-40fd-aa27-972417c20c27" time="1362640798158" ignored="false" />
     <file path="/carts_controller.rb" changelist="90db9705-d3af-40fd-aa27-972417c20c27" time="1362128301485" ignored="false" />
     <file path="/cart_item.rb" changelist="90db9705-d3af-40fd-aa27-972417c20c27" time="1362127072384" ignored="false" />
     <file path="/20130301083320_create_cart_items.rb" changelist="90db9705-d3af-40fd-aa27-972417c20c27" time="1362128587367" ignored="false" />
     <file path="/20130301083601_add_cart_item_to_product.rb" changelist="90db9705-d3af-40fd-aa27-972417c20c27" time="1362127673809" ignored="false" />
     <file path="/.gitignore" changelist="90db9705-d3af-40fd-aa27-972417c20c27" time="1362130182252" ignored="false" />
-    <file path="/checkouts_controller.rb" changelist="90db9705-d3af-40fd-aa27-972417c20c27" time="1362554832714" ignored="false" />
+    <file path="/checkouts_controller.rb" changelist="90db9705-d3af-40fd-aa27-972417c20c27" time="1362643836272" ignored="false" />
     <file path="/index.html.erb" changelist="90db9705-d3af-40fd-aa27-972417c20c27" time="1362549955069" ignored="false" />
-    <file path="/address.rb" changelist="90db9705-d3af-40fd-aa27-972417c20c27" time="1362133362758" ignored="false" />
+    <file path="/address.rb" changelist="90db9705-d3af-40fd-aa27-972417c20c27" time="1362643402451" ignored="false" />
     <file path="/20130301102201_create_addresses.rb" changelist="90db9705-d3af-40fd-aa27-972417c20c27" time="1362133418150" ignored="false" />
     <file path="/user.rb" changelist="90db9705-d3af-40fd-aa27-972417c20c27" time="1362370901323" ignored="false" />
     <file path="/sfsd" changelist="90db9705-d3af-40fd-aa27-972417c20c27" time="1362371374610" ignored="false" />
@@ -44,11 +54,14 @@
     <file path="/credit_card.rb" changelist="90db9705-d3af-40fd-aa27-972417c20c27" time="1362388370082" ignored="false" />
     <file path="/credit_cards_controller.rb" changelist="90db9705-d3af-40fd-aa27-972417c20c27" time="1362561559383" ignored="false" />
     <file path="/fuelable.rb" changelist="90db9705-d3af-40fd-aa27-972417c20c27" time="1362389768122" ignored="false" />
-    <file path="/temp.rb" changelist="90db9705-d3af-40fd-aa27-972417c20c27" time="1362465945625" ignored="false" />
+    <file path="/temp.rb" changelist="90db9705-d3af-40fd-aa27-972417c20c27" time="1362641933020" ignored="false" />
     <file path="/fragment.rb" changelist="90db9705-d3af-40fd-aa27-972417c20c27" time="1362556575986" ignored="false" />
     <file path="/callback_controller.rb" changelist="90db9705-d3af-40fd-aa27-972417c20c27" time="1362469650379" ignored="false" />
     <file path="/20130306054909_add_credit_card_to_cart.rb" changelist="90db9705-d3af-40fd-aa27-972417c20c27" time="1362549025093" ignored="false" />
-    <file path="/create.html.erb" changelist="90db9705-d3af-40fd-aa27-972417c20c27" time="1362566561764" ignored="false" />
+    <file path="/create.html.erb" changelist="90db9705-d3af-40fd-aa27-972417c20c27" time="1362651899752" ignored="false" />
+    <file path="/checkout.js" changelist="90db9705-d3af-40fd-aa27-972417c20c27" time="1362652316072" ignored="false" />
+    <file path="/addresses_controller.rb" changelist="90db9705-d3af-40fd-aa27-972417c20c27" time="1362643357005" ignored="false" />
+    <file path="/checkout.css.scss" changelist="90db9705-d3af-40fd-aa27-972417c20c27" time="1362650267352" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,14 +86,34 @@
       <file leaf-file-name="create.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/checkouts/create.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="61" selection-start="350" selection-end="350" vertical-scroll-proportion="-5.625">
+            <state line="125" column="46" selection-start="5277" selection-end="5287" vertical-scroll-proportion="-16.041666">
+              <folding>
+                <element signature="n#style#0;n#div#4;n#div#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="checkout.css.scss" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/checkout.css.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="17" selection-start="256" selection-end="256" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application_controller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
+      <file leaf-file-name="responsive.scss" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p385@global/gems/bootstrap-sass-2.3.0.1/vendor/assets/stylesheets/bootstrap/responsive.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="21" column="23" selection-start="583" selection-end="583" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_dropdowns.scss" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p385@global/gems/bootstrap-sass-2.3.0.1/vendor/assets/stylesheets/bootstrap/_dropdowns.scss">
           <provider selected="true" editor-type-id="text-editor">
             <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
@@ -88,46 +121,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="carts_controller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/carts_controller.rb">
+      <file leaf-file-name="_forms.scss" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p385@global/gems/bootstrap-sass-2.3.0.1/vendor/assets/stylesheets/bootstrap/_forms.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="69" column="0" selection-start="1218" selection-end="1237" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="address_helper.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/helpers/address_helper.rb">
+      <file leaf-file-name="checkout.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/checkout.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="admin.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/admin.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cart.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/cart.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="credit_card.rb" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/models/credit_card.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="57" column="45" selection-start="2409" selection-end="2409" vertical-scroll-proportion="1.3276397">
               <folding />
             </state>
           </provider>
@@ -157,22 +163,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
-        <option value="$PROJECT_DIR$/Gemfile" />
-        <option value="$PROJECT_DIR$/config/initializers/fuelable.rb" />
-        <option value="$USER_HOME$/.rvm/gems/ruby-1.9.3-p385@global/gems/fuelable-0.1/lib/fuelable/cardtoken.rb" />
-        <option value="$PROJECT_DIR$/app/models/credit_card.rb" />
-        <option value="dbtable:/c4cb2f9/16a248ef-1a02-4a9e-bb36-ca6298d94938/..credit_cards" />
         <option value="$PROJECT_DIR$/app/controllers/callback_controller.rb" />
         <option value="$PROJECT_DIR$/config/environments/development.rb" />
-        <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/models/cart.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20130306054909_add_credit_card_to_cart.rb" />
         <option value="$PROJECT_DIR$/app/views/checkouts/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/carts/show.html.erb" />
-        <option value="$PROJECT_DIR$/app/controllers/checkouts_controller.rb" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/checkout.js.coffee" />
         <option value="$PROJECT_DIR$/app/controllers/credit_cards_controller.rb" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
+        <option value="$PROJECT_DIR$/config/routes.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/addresses_controller.rb" />
+        <option value="$PROJECT_DIR$/app/models/address.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/checkouts_controller.rb" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/checkout.css.scss" />
         <option value="$PROJECT_DIR$/app/views/checkouts/create.html.erb" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/checkout.js" />
       </list>
     </option>
   </component>
@@ -823,6 +829,28 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="addresses" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rails-shop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rails-shop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="uploaders" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -978,7 +1006,7 @@
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
   </component>
-  <component name="RunManager" selected="Rake.db:migrate">
+  <component name="RunManager" selected="Rails.Development: rails-shop">
     <configuration default="false" name="db:migrate" type="RakeRunConfigurationType" factoryName="Rake" temporary="true">
       <module name="rails-shop" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
@@ -1421,7 +1449,11 @@
       <created>1362481408002</created>
       <updated>1362481408002</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Initial payment integration.">
+      <created>1362566645106</created>
+      <updated>1362566645106</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1514,14 +1546,68 @@
           <line>99</line>
           <option name="timeStamp" value="37" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/app/assets/javascripts/checkout.js</url>
+          <line>53</line>
+          <option name="timeStamp" value="46" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="43" />
+      <option name="time" value="47" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/normalize.css">
+    <entry file="file://$PROJECT_DIR$/app/models/address.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="2" selection-start="57" selection-end="83" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/addresses/_form.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="184" vertical-scroll-proportion="-0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/helpers/addresses_helper.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/credit_cards_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="74" selection-start="157" selection-end="157" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/checkouts_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="34" selection-start="288" selection-end="288" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p385@global/gems/bootstrap-sass-2.3.0.1/vendor/assets/stylesheets/bootstrap-responsive.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="22" selection-start="22" selection-end="22" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/bootstrap_and_overrides.css.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="20" selection-start="69" selection-end="69" vertical-scroll-proportion="0.054347824">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/scaffolds.css.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="77" selection-start="254" selection-end="254" vertical-scroll-proportion="0.2550091">
           <folding />
         </state>
       </provider>
@@ -1533,42 +1619,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/scaffolds.css.scss">
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/normalize.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="2" selection-start="659" selection-end="681" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/bootstrap_and_overrides.css.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="17" selection-start="66" selection-end="66" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p385@global/gems/bootstrap-sass-2.3.0.1/vendor/assets/stylesheets/bootstrap-responsive.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="24" selection-start="24" selection-end="24" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p385@global/gems/bootstrap-sass-2.3.0.1/vendor/assets/stylesheets/bootstrap/responsive.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="21" column="23" selection-start="583" selection-end="583" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p385@global/gems/bootstrap-sass-2.3.0.1/vendor/assets/stylesheets/bootstrap/bootstrap.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p385@global/gems/bootstrap-sass-2.3.0.1/vendor/assets/stylesheets/bootstrap.scss">
+    <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p385@global/gems/bootstrap-sass-2.3.0.1/vendor/assets/stylesheets/bootstrap/_dropdowns.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
@@ -1577,56 +1642,30 @@
     </entry>
     <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p385@global/gems/bootstrap-sass-2.3.0.1/vendor/assets/stylesheets/bootstrap/_forms.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="354" column="1" selection-start="8268" selection-end="8287" vertical-scroll-proportion="0.18214937">
+        <state line="69" column="0" selection-start="1218" selection-end="1237" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/checkout.css.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="17" selection-start="256" selection-end="256" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/checkouts/create.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="61" selection-start="350" selection-end="350" vertical-scroll-proportion="-5.625">
-          <folding />
+        <state line="125" column="46" selection-start="5277" selection-end="5287" vertical-scroll-proportion="-16.041666">
+          <folding>
+            <element signature="n#style#0;n#div#4;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/checkout.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/carts_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/helpers/address_helper.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/admin.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/cart.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/credit_card.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="57" column="45" selection-start="2409" selection-end="2409" vertical-scroll-proportion="1.3276397">
           <folding />
         </state>
       </provider>

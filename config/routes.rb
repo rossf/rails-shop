@@ -4,7 +4,7 @@ RailsShop::Application.routes.draw do
 
   devise_for :users
 
-  resources :products, :carts, :checkouts, :credit_cards, :callback, :address
+  resources :products, :carts, :checkouts, :credit_cards, :addresses
 
 
   # The priority is based upon order of creation:
