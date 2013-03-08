@@ -4,8 +4,13 @@ RailsShop::Application.routes.draw do
 
   devise_for :users
 
-  resources :products, :carts, :checkouts, :credit_cards, :addresses
+  resources :products, :carts, :credit_cards, :addresses
 
+  resources :checkouts do
+    collection do
+      post 'start'
+    end
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

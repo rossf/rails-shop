@@ -68,7 +68,7 @@
       <% end %>
     </div>
 
-    <div id="billing_address" style="display:none" >
+    <div id="billing_address" style="display:none">
       <div class="accordion-heading">
         <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseBilling">
           Billing Address
@@ -113,17 +113,21 @@
     </div>
     <div id="collapseShippingMethod" class="accordion-body collapse">
       <fieldset>
-          <%= radio_button_tag(:shipping_method, "flying_monkeys") %>
-          <%= label_tag(:shipping_method_flying_monkeys, "Flying Monkeys") %>
-          <br/>
-          <%= radio_button_tag(:shipping_method, "teleportation") %>
-          <%= label_tag(:shipping_method_teleportation, "Teleportation") %>
+        <%= radio_button_tag(:shipping_method, "flying_monkeys") %>
+        <%= label_tag(:shipping_method_flying_monkeys, "Flying Monkeys") %>
         <br/>
-          <%= radio_button_tag(:shipping_method, "post") %>
-          <%= label_tag(:shipping_method_post, "Some guy showing up at your door (post)") %>
+        <%= radio_button_tag(:shipping_method, "teleportation") %>
+        <%= label_tag(:shipping_method_teleportation, "Teleportation") %>
+        <br/>
+        <%= radio_button_tag(:shipping_method, "post") %>
+        <%= label_tag(:shipping_method_post, "Some guy showing up at your door (post)") %>
       </fieldset>
 
-      <%= button_tag "Order", :id=>"submit_all" %>
+      <%= form_for @transaction, :url => {:action => 'create'} do %>
+          <%= hidden_field_tag "card", '', :id => 'card_transaction' %>
+          <%= hidden_field_tag "address", '', :id => 'address_transaction' %>
+          <%= submit_tag "Order", :id => "submit_all" %>
+      <% end %>
     </div>
   </div>
 </div>

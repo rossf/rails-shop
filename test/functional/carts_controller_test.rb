@@ -11,8 +11,8 @@ class CartsControllerTest < ActionController::TestCase
     assert_not_nil assigns(:carts)
   end
 
-  test "should get new" do
-    get :new
+  test "should get start" do
+    get :start
     assert_response :success
   end
 

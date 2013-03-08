@@ -7,7 +7,7 @@
     <%= product.name  %>
 <% end %>
 
-<%=  form_tag(:controller => :checkouts) do %>
+<%=  form_tag({:controller => :checkouts, :action=> :start}) do %>
     <%= hidden_field_tag :cart, @cart.id %>
     <%= submit_tag 'Checkout' %>
 <% end %>

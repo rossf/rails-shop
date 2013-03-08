@@ -8,7 +8,7 @@ class ProductsController < ApplicationController
     @products = Product.all
 
     respond_to do |format|
-      format.html # create.html.erb
+      format.html # startrt.html.erb
       format.json { render json: @products }
     end
   end
@@ -24,13 +24,13 @@ class ProductsController < ApplicationController
     end
   end
 
-  # GET /products/new
-  # GET /products/new.json
+  # GET /products/start
+  # GET /products/start.json
   def new
     @product = Product.new
 
     respond_to do |format|
-      format.html # create.html.erb
+      format.html # start.html.erbrb
       format.json { render json: @product }
     end
   end

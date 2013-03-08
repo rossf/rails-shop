@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  user: 
+  cart: 
+  address: 
+  credit_card: 
+
+two:
+  user: 
+  cart: 
+  address: 
+  credit_card: 

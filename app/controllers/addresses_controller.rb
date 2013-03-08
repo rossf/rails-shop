@@ -24,13 +24,13 @@ class AddressesController < ApplicationController
     end
   end
 
-  # GET /addresses/new
-  # GET /addresses/new.json
+  # GET /addresses/start
+  # GET /addresses/start.json
   def new
     @address = Address.new
 
     respond_to do |format|
-      format.html # new.html.erb
+      format.html # start.html.erbrb
       format.json { render json: @address }
     end
   end

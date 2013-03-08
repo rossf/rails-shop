@@ -8,7 +8,7 @@ class CartsController < ApplicationController
     @carts = Cart.all
 
     respond_to do |format|
-      format.html # create.html.erb
+      format.html # start.html.erbrb
       format.json { render json: @carts }
     end
   end
@@ -24,13 +24,13 @@ class CartsController < ApplicationController
     end
   end
 
-  # GET /carts/new
-  # GET /carts/new.json
+  # GET /carts/start
+  # GET /carts/start.json
   def new
     @cart = Cart.new
 
     respond_to do |format|
-      format.html # create.html.erb
+      format.html # start.html.erbrb
       format.json { render json: @cart }
     end
   end

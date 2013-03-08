@@ -11,8 +11,8 @@ class AddressesControllerTest < ActionController::TestCase
     assert_not_nil assigns(:addresses)
   end
 
-  test "should get new" do
-    get :new
+  test "should get start" do
+    get :start
     assert_response :success
   end
 

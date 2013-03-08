@@ -2,7 +2,7 @@ require 'fuelable/cardtoken'
 
 class CreditCardsController < ApplicationController
 
-  Fuelable::api_key = 'sb_MDY5ZjM2NDAtNjhlYy00OGM3LTljMDYtZmI3NjBjYTEwMTVh'
+  Fuelable::api_key = 'sb_ZGZlMTY1YzctZTBkYi00OTI3LTg4MzgtZDlmMjQ3M2Q5ZmJh'
 
   before_filter :authenticate_user!
 
@@ -12,7 +12,7 @@ class CreditCardsController < ApplicationController
     @credit_cards = CreditCard.all
 
     respond_to do |format|
-      format.html # create.html.erb
+      format.html # startrt.html.erb
       format.json { render json: @credit_cards }
     end
   end
@@ -28,13 +28,13 @@ class CreditCardsController < ApplicationController
     end
   end
 
-  # GET /credit_cards/new
-  # GET /credit_cards/new.json
+  # GET /credit_cards/start
+  # GET /credit_cards/start.json
   def new
     @credit_card = CreditCard.new
 
     respond_to do |format|
-      format.html # create.html.erb
+      format.html # start.html.erbrb
       format.json { render json: @credit_card }
     end
   end
@@ -48,6 +48,7 @@ class CreditCardsController < ApplicationController
   # POST /credit_cards.json
   def create
     card_hash = params[:credit_card]
+    card_hash = Hash.new if card_hash.nil?
     expiry_year = card_hash['expiry_date(1i)']
     expiry_month = card_hash['expiry_date(2i)']
     card_hash['expiry_month'] = expiry_month
@@ -59,7 +60,7 @@ class CreditCardsController < ApplicationController
     @credit_card.user = current_user
 
     card_hash['expMonth'] = expiry_month
-    card_hash['expYear'] = expiry_year.length > 2 ? expiry_year[2..-1] : expiry_year
+    card_hash['expYear'] = !expiry_year.nil? && expiry_year.length > 2 ? expiry_year[2..-1] : expiry_year
 
     card_token_hash = {"card" => card_hash}
     begin
@@ -77,11 +78,9 @@ class CreditCardsController < ApplicationController
       if @credit_card.errors.empty? && @credit_card.save
         format.html { redirect_to @credit_card, notice: 'Credit card was successfully created.' }
         format.json { render json: @credit_card, status: :created, location: @credit_card }
-        format.js {render json: @credit_card, status: :created, location: @credit_card}
       else
         format.html { render action: "new" }
         format.json { render json: @credit_card.errors, status: :unprocessable_entity }
-        format.js { render json: @credit_card.errors, status: :unprocessable_entity }
       end
     end
   end
